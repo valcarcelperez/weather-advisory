@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherAdvisory.Domain", "W
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherAdvisory.Domain.Tests", "WeatherAdvisory.Domain.Tests\WeatherAdvisory.Domain.Tests.csproj", "{647BE6A9-A814-4200-9A9E-C4ECD80BDEBE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherAdvisory.WeatherService", "WeatherAdvisory.WeatherService\WeatherAdvisory.WeatherService.csproj", "{BBEE1FA0-5CAD-4246-B69B-309F757FCE2D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherAdvisory.WeatherService.Tests", "WeatherAdvisory.WeatherService.Tests\WeatherAdvisory.WeatherService.Tests.csproj", "{99C33841-CA9B-49F1-ACD8-4879D0415D2A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{647BE6A9-A814-4200-9A9E-C4ECD80BDEBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{647BE6A9-A814-4200-9A9E-C4ECD80BDEBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{647BE6A9-A814-4200-9A9E-C4ECD80BDEBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBEE1FA0-5CAD-4246-B69B-309F757FCE2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBEE1FA0-5CAD-4246-B69B-309F757FCE2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBEE1FA0-5CAD-4246-B69B-309F757FCE2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBEE1FA0-5CAD-4246-B69B-309F757FCE2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99C33841-CA9B-49F1-ACD8-4879D0415D2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99C33841-CA9B-49F1-ACD8-4879D0415D2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99C33841-CA9B-49F1-ACD8-4879D0415D2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99C33841-CA9B-49F1-ACD8-4879D0415D2A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
