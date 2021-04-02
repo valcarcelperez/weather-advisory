@@ -21,7 +21,7 @@ namespace WeatherAdvisory.Domain
 
         public bool CanIFlyMyKite(WeatherData weatherData)
         {
-            return weatherData.WindSpeed > _config.MinWindSpeedToFlyAKite;
+            return weatherData.Precipitation == 0 && weatherData.WindSpeed > _config.MinWindSpeedToFlyAKite;
         }
 
         public bool ShouldIGoOutside(WeatherData weatherData)

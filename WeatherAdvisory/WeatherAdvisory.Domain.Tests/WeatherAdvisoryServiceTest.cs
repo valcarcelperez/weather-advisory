@@ -22,36 +22,25 @@ namespace WeatherAdvisory.Domain.Tests
         }
 
         [TestMethod]
-        public void CanIFlyMyKite_Given_wind_speed_is_over_15_Should_return_true()
+        [DataRow(false, 20, true, "when is not raining and wind speed over 15 should return true")]
+        [DataRow(false, 15, false, "when is not raining and wind speed is 15 should return false")]
+        [DataRow(false, 5, false, "when is not raining and wind speed is below 15 should return true")]
+        [DataRow(true, 20, false, "when is raining and wind speed over 15 should return false")]
+        [DataRow(true, 15, false, "when is raining and wind speed is 15 should return false")]
+        [DataRow(true, 5, false, "when is raining and wind speed is below 15 should return false")]
+        public void CanIFlyMyKite_Scenarios(bool isRaining, int windSpeed, bool expected, string description)
         {
-            var weatherData = new WeatherData { WindSpeed = 20 };
-            
-            var actual = _target.CanIFlyMyKite(weatherData);
-
-            Assert.IsTrue(actual);
-        }
-
-        [TestMethod]
-        public void CanIFlyMyKite_Given_wind_speed_is_15_Should_return_false()
-        {
-            var weatherData = new WeatherData { WindSpeed = 15 };
-
-            var actual = _target.CanIFlyMyKite(weatherData);
-
-            Assert.IsFalse(actual);
-        }
-
-        [TestMethod]
-        public void CanIFlyMyKite_Given_wind_speed_is_below_15_Should_return_false()
-        {
-            var weatherData = new WeatherData { WindSpeed = 5 };
+            var weatherData = new WeatherData 
+            { 
+                WindSpeed = windSpeed,
+                Precipitation = isRaining ? 1 : 0
+            };
 
             var actual = _target.CanIFlyMyKite(weatherData);
 
-            Assert.IsFalse(actual);
+            Assert.AreEqual(expected, actual, description);
         }
 
-        // Using DataRow
         [TestMethod]
         [DataRow(0, true, "when precipitation is zero should return true")]
         [DataRow(1, false, "when precipitation greater than zero should return false")]
