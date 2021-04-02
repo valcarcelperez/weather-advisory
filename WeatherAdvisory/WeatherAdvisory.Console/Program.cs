@@ -20,6 +20,7 @@ namespace WeatherAdvisory.Console
         private static void ConfigureServices(HostBuilderContext hostContext, IServiceCollection services)
         {
             services.AddSingleton<IWeatherAdvisoryAppLogger>(new ConsoleLogger());
+            services.AddSingleton<ILocationProvider>(new ConsoleLocationProvider());
         }
     }
 }
