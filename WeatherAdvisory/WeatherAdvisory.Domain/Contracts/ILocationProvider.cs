@@ -2,6 +2,6 @@
 {
     public interface ILocationProvider
     {
-        bool TryGetLocation(out string zipcode);
+        bool TryGetLocation(out string zipCode);
     }
 }

@@ -17,13 +17,13 @@ namespace WeatherAdvisory.Domain
         {
             _logger.Log("Running");
 
-            if (!_locationProvider.TryGetLocation(out string zipcode))
+            if (!_locationProvider.TryGetLocation(out string zipCode))
             {
                 _logger.Log("Invalid location. Exiting.");
                 return;
             }
 
-            _logger.Log($"Location '{zipcode}' entered.");
+            _logger.Log($"Location '{zipCode}' entered.");
         }
     }
 }

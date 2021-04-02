@@ -4,7 +4,7 @@ namespace WeatherAdvisory.Console
 {
     public class ConsoleLocationProvider : ILocationProvider
     {
-        public bool TryGetLocation(out string zipcode)
+        public bool TryGetLocation(out string zipCode)
         {
             var attemptCount = 0;
             const int maxAttempts = 5;
@@ -13,8 +13,8 @@ namespace WeatherAdvisory.Console
 
             while (true)
             {
-                zipcode = System.Console.ReadLine();
-                if (ValidateZipCode(zipcode))
+                zipCode = System.Console.ReadLine();
+                if (ValidateZipCode(zipCode))
                 {
                     return true;
                 }
@@ -29,9 +29,9 @@ namespace WeatherAdvisory.Console
             }
         }
 
-        private bool ValidateZipCode(string zipcode)
+        private bool ValidateZipCode(string zipCode)
         {
-            return zipcode.Length == 5 && int.TryParse(zipcode, out _);
+            return zipCode.Length == 5 && int.TryParse(zipCode, out _);
         }
     }
 }
