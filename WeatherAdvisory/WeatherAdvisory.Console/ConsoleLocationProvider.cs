@@ -1,8 +1,6 @@
-﻿using WeatherAdvisory.Domain.Contracts;
-
-namespace WeatherAdvisory.Console
+﻿namespace WeatherAdvisory.Console
 {
-    public class ConsoleLocationProvider : ILocationProvider
+    public class ConsoleLocationProvider 
     {
         public bool TryGetLocation(out string zipCode)
         {

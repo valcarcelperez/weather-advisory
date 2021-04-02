@@ -6,11 +6,22 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="appsettings.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="5.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\WeatherAdvisory.Domain\WeatherAdvisory.Domain.csproj" />
+    <ProjectReference Include="..\WeatherAdvisory.WeatherService\WeatherAdvisory.WeatherService.csproj" />
   </ItemGroup>
 
 </Project>

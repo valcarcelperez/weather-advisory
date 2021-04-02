@@ -7,21 +7,21 @@ using WeatherAdvisory.Domain.Models;
 
 namespace WeatherAdvisory.WeatherService
 {
-    public class WeatherServiceConfig
+    public class WeatherServiceApiClientConfig
     {
         public string BaseAddress { get; set; }
         public string RequestUrl { get; set; }
     }
 
-    public class WeatherService : IWeatherService, IDisposable
+    public class WeatherServiceApiClient : IWeatherService, IDisposable
     {
         private readonly HttpClient _client;
-        private readonly WeatherServiceConfig _config;
+        private readonly WeatherServiceApiClientConfig _config;
         private bool _disposed = false;
 
         private readonly JsonSerializerOptions _jsonSerializerOptions;
 
-        public WeatherService(WeatherServiceConfig config)
+        public WeatherServiceApiClient(WeatherServiceApiClientConfig config)
         {
             _config = config;
             _client = new HttpClient
@@ -35,7 +35,7 @@ namespace WeatherAdvisory.WeatherService
             };
         }
 
-        ~WeatherService()
+        ~WeatherServiceApiClient()
         {
             Dispose(false);
         }
